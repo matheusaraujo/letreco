@@ -60,7 +60,7 @@ function Game() {
 
   const [isEndGameScreenOpen, setIsEndGameScreenOpen] = useState<boolean>(false);
 
-  const dailyWord = useMemo<DailyWord>(() => getDailyWord(randomNumber), []);
+  const dailyWord = getDailyWord(randomNumber);
 
   const updateStatistics = (isGameWon: boolean, guessesAmount: number) => {
     const newStreak = isGameWon ? statistics.currentStreak + 1 : 0;
