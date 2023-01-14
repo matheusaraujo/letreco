@@ -1,6 +1,6 @@
 {
   "name": "letreco",
-  "homepage": "https://gabtoschi.github.io/letreco/",
+  "homepage": "https://matheusaraujo.github.io/letreco/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -45,6 +45,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^4.0.0"
   }
 }
