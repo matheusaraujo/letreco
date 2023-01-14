@@ -7,7 +7,7 @@ import SettingsScreen from './SettingsScreen';
 import { GlobalSettingsContext } from '../hooks/useGlobalSettings';
 import { StatisticsScreen } from './StatisticsScreen';
 
-const APP_NAME = 'LETRECO';
+const APP_NAME = 'AMORECO';
 const TWITTER_URL = 'https://twitter.com/meuletreco';
 
 function Header() {

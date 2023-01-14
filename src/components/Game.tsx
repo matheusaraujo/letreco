@@ -40,6 +40,8 @@ const updateKeyboardButtonStates = (guesses: GuessLetter[][]): KeyboardButtonSta
   }
 }
 
+let randomNumber = Math.random();
+
 function Game() {
   const [statistics, setStatistics] = useContext(StatisticsContext);
 
@@ -58,8 +60,7 @@ function Game() {
 
   const [isEndGameScreenOpen, setIsEndGameScreenOpen] = useState<boolean>(false);
 
-  const dailyWord = useMemo<DailyWord>(() => getDailyWord(), []);
-
+  const dailyWord = useMemo<DailyWord>(() => getDailyWord(randomNumber), []);
 
   const updateStatistics = (isGameWon: boolean, guessesAmount: number) => {
     const newStreak = isGameWon ? statistics.currentStreak + 1 : 0;
@@ -239,7 +240,10 @@ function Game() {
   });
 
   const handleEndGameScreenClose = () => {
+    setButtonStates(BUTTON_STATES_INIT);
+    setSavedGame(SAVED_GAME_INIT);
     setIsEndGameScreenOpen(false);
+    randomNumber = Math.random();
   }
 
   return (
